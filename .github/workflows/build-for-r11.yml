@@ -1,4 +1,4 @@
-name: build-for-nx508j
+name: build-for-r11
 
 on: workflow_dispatch
 
@@ -42,7 +42,7 @@ jobs:
           mkdir -p device/oppo kernel/oppo vendor/oppo
           git clone https://github.com/JackLI9/android_device_nubia_nx508j device/oppo/r11
           git clone https://github.com/JackLI9/android_vendor_nubia_nx508j  vendor/oppo/r11
-          git clone https://github.com/sticpaper/android_kernel_oppo_sdm660_1  kernel/nubia/msm8994
+          git clone https://github.com/sticpaper/android_kernel_oppo_sdm660_1  kernel/oppo/sdm660
           git clone https://github.com/LineageOS/android_hardware_sony_timekeep -b lineage-16.0 hardware/sony/timekeep
           source build/envsetup.sh
           lunch lineage_r11-userdebug
