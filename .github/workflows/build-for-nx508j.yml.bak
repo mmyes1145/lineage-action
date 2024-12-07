@@ -39,13 +39,13 @@ jobs:
           
       - name: Setting Up Build Environment
         run: |
-          mkdir -p device/oppo kernel/oppo vendor/oppo
+          mkdir -p device/nubia kernel/nubia vendor/nubia
           git clone https://github.com/JackLI9/android_device_nubia_nx508j device/oppo/r11
           git clone https://github.com/JackLI9/android_vendor_nubia_nx508j  vendor/oppo/r11
           git clone https://github.com/sticpaper/android_kernel_oppo_sdm660_1  kernel/nubia/msm8994
           git clone https://github.com/LineageOS/android_hardware_sony_timekeep -b lineage-16.0 hardware/sony/timekeep
           source build/envsetup.sh
-          lunch lineage_r11-userdebug
+          lunch lineage_nx508j-userdebug
           
       - name: Starting Build Process
         run: |
@@ -67,6 +67,6 @@ jobs:
             This is an Automatic Release by GitHub Actions.
           files: |
             $OUT/recovery.img
-            $OUT/lineage-*-r11.zip
+            $OUT/lineage-*-nx508j.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
