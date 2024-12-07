@@ -39,7 +39,11 @@ jobs:
           
       - name: Setting Up Build Environment
         run: |
+<<<<<<< HEAD
           mkdir -p device/oppo kernel/oppo vendor/oppo
+=======
+          mkdir -p device/nubia kernel/nubia vendor/nubia
+>>>>>>> 9d34eee7e96967e06ceb89cc15ce81607e441c75
           git clone https://github.com/JackLI9/android_device_nubia_nx508j device/oppo/r11
           git clone https://github.com/JackLI9/android_vendor_nubia_nx508j  vendor/oppo/r11
           git clone https://github.com/sticpaper/android_kernel_oppo_sdm660_1  kernel/nubia/msm8994

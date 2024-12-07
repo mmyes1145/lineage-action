@@ -40,10 +40,17 @@ jobs:
       - name: Setting Up Build Environment
         run: |
           mkdir -p device/nubia kernel/nubia vendor/nubia
+<<<<<<< HEAD
           git clone https://github.com/JackLI9/android_device_nubia_nx508j device/oppo/r11
           git clone https://github.com/JackLI9/android_vendor_nubia_nx508j  vendor/oppo/r11
           git clone https://github.com/sticpaper/android_kernel_oppo_sdm660_1  kernel/nubia/msm8994
           git clone https://github.com/LineageOS/android_hardware_sony_timekeep -b lineage-16.0 hardware/sony/timekeep
+=======
+          git clone https://github.com/JackLI9/android_device_nubia_nx508j -b device/oppo/r11
+          git clone https://github.com/JackLI9/android_vendor_nubia_nx508j -b staging/lineage-18.1 vendor/oppo/r11
+          git clone https://github.com/JackLI9/android_kernel_nubia_msm8994 -b staging/lineage-18.1 kernel/nubia/msm8994
+          git clone https://github.com/LineageOS/android_hardware_sony_timekeep -b lineage-18.1 hardware/sony/timekeep
+>>>>>>> 9d34eee7e96967e06ceb89cc15ce81607e441c75
           source build/envsetup.sh
           lunch lineage_nx508j-userdebug
           
