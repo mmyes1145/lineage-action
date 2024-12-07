@@ -3,11 +3,12 @@ name: build-for-r11
 on: workflow_dispatch
 
 jobs:
-  build-for-nx508j:
+  build-for-r11:
     runs-on: ubuntu-latest
     steps:
       - name: Setting up Build Directories
         run: |
+          df -h
           mkdir ~/bin
           mkdir -p ~/android/lineage
           cd ~/android/lineage
